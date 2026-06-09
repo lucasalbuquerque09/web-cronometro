@@ -1,10 +1,11 @@
+/* Reset CSS */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Orbitron", sans-serif;
 }
-
+/* Cores do tema */
 :root {
     --cor1: #073BB3;
     --cor2: #004C8A;
@@ -15,6 +16,7 @@
     --cor7: #0C1322;
 }
 
+/* Estilos globais */
 html,
 body {
     width: 100%;
@@ -31,6 +33,7 @@ body {
     height: 100vh;
 }
 
+/* Estilos do wrapper */
 .wrapper {
     width: 600px;
     height: 600px;
@@ -44,6 +47,7 @@ body {
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.384);
 }
 
+/* Estilos do título */
 h1 {
     color: var(--cor2);
     font-size: 3rem;
@@ -52,15 +56,18 @@ h1 {
     text-shadow: 0px 0px 20px var(--cor4);
 }
 
+/* Estilos do cronômetro */
 .timer {
     display: flex;
 }
 
+/* Estilos dos milissegundos */
 #milliseconds {
     font-size: 2rem;
     color: var(--cor3);
 }
 
+/* Estilos do tempo */
 .time {
     display: flex;
     justify-content: center;
@@ -72,12 +79,14 @@ h1 {
     margin-right: 20px;
 }
 
+/* Estilos dos separadores */
 .separar {
     font-size: 4rem;
     font-weight: 700;
     color: var(--cor6);
 }
 
+/* Estilos dos botões */
 .container-btn {
     display: flex;
     margin-top: 30px;
@@ -104,6 +113,11 @@ h1 {
     border: 1px solid rgba(0, 0, 0, 0.582);
 }
 
+button{
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Estilos para dispositivos móveis */
 @media screen and (max-width: 767px) {
     * {
         max-width: 100%;
@@ -128,13 +142,12 @@ h1 {
         border: none;
         overflow: hidden;
         border-radius: 0;
-        border: 1px solid white;
         gap: 20px;
         padding: 20px;
     }
 
     h1 {
-        font-size: 2rem;
+        font-size: 3rem;
         margin: 0;
     }
 
@@ -142,20 +155,21 @@ h1 {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        margin-top: 40px;
     }
 
     .time {
-        font-size: 2rem;
-        min-width: 60px;
+        font-size: 3rem;
+        min-width: 80px;
         margin-right: 10px;
     }
 
     #milliseconds {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
 
     .separar {
-        font-size: 2.5rem;
+        font-size: 3rem;
         margin-right: 10px;
     }
 

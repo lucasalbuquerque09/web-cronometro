@@ -1,20 +1,24 @@
+// Seleção dos elementos do DOM
 const minutes = document.querySelector("#minutes");
 const seconds = document.querySelector("#seconds");
 const milliseconds = document.querySelector("#milliseconds");
 const btnStart = document.querySelector("#startBtn");
 const pauseBtn = document.querySelector("#pauseBtn");
 const resetBtn = document.querySelector("#resetBtn");
+
+// Variáveis para controle do tempo e estado do cronômetro
 let interval;
 let minutos = 0;
 let segundos = 0;
 let milissegundos = 0;
 let running = false;
 
+// Adição dos event listeners para os botões
 btnStart.addEventListener("click", startTime);
 pauseBtn.addEventListener("click", pauseTime);
 resetBtn.addEventListener("click", resetTime);
 
-
+// Função para iniciar o cronômetro
 function startTime() {
     if (running) return;
 
@@ -37,19 +41,23 @@ function startTime() {
     }, 10);
 }
 
+// Função para formatar o tempo (minutos e segundos)
 function formatTime(time) {
     return time < 10 ? `0${time}` : time;
 }
 
+// Função para formatar os milissegundos
 function formatMilliseconds(time) {
     return time < 100 ? `${time}`.padStart(3, "0") : time;
 }
 
+// Função para pausar o cronômetro
 function pauseTime() {
     clearInterval(interval)
     running = false;
 }
 
+// Função para resetar o cronômetro
 function resetTime() {
     clearInterval(interval);
     running = false;
